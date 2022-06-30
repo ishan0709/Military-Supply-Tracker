@@ -8,6 +8,13 @@ class details                  //Class for login credentials
 	int ID;
 	int PASS;
 };
+class store_details
+{
+	public:
+		int ID;
+		int PASS;
+		string time;
+};
 class regiment                //Class for regiment status
 {
     public:
@@ -223,7 +230,8 @@ void administrator()
 {
 	fstream f ;
 	f.open("logs.dat" , ios::app | ios::binary); // File to store logs
-	details C,Cw;
+	details C;
+	store_details Cw;
 	cout<<"\n\t\t\tEnter regiment code: ";
 	cin>>code;
 	cout<<"\n\t\t\tEnter ID:";
@@ -232,6 +240,8 @@ void administrator()
 	cin>>pass;
 	Cw.ID=id ;
 	Cw.PASS=pass ;
+	time_t my_time = time(NULL);
+        Cw.time= ctime(&my_time);
 	f.write((char*)&Cw,sizeof(Cw)); // Storing login details in a file
 	f.close();
 	fstream c1;

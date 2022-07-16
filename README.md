@@ -1,6 +1,5 @@
 # Military-Supply-Tracker
 1. This is a Database Management System, which has its primary application in the military, acting as a supply tracker and alert notifier.
-2. Only Certain Ranks of All the regiments are allowed to login and check status for supplies of the regiments they belong to.
-3. All the login attempts are logged.
-4. Access Gainers can request for Ammunition , Food and Medical Supplies from the Centre.
-5. Access Gainers can also change the status to Excess which helps in saving the resources.
+2. This project helps keep a track of food, medicine and ammunition in different military regiments.
+3. Nearest regiments with excess/deficient supply are displayed, to facilitate inter-regiment exchanges.
+4. Proper authorization is required to access/edit the information, and details of each such attempt are recorded.
